@@ -37,6 +37,10 @@ function deleteAndRewrite() {
 }
 
 
-setTimeout(()=>{
-    deleteAndRewrite()
-}, 15000)
+function startLoop() {
+    setInterval(function () {
+        deleteAndRewrite();
+    }, 16000); // Wait for the deleteAndRewrite function to complete and then start again
+}
+
+startLoop()
